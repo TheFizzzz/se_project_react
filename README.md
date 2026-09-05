@@ -4,10 +4,6 @@
 
 WTWR is a React front-end application that recommends clothing based on the current weather. Users can browse their wardrobe, view item details, and add new garments through modal forms.
 
-## Live demo
-
-[https://thefizzzz.github.io/se_project_react/](https://thefizzzz.github.io/se_project_react/)
-
 ## Functionality
 
 - View hard-coded weather information and a clothing wardrobe
