@@ -31,15 +31,3 @@ npm run dev
 ```
 
 The app runs at [http://localhost:3000](http://localhost:3000).
-
-## Deployment
-
-```bash
-npm run deploy
-```
-
-Then set the GitHub Pages source branch to `gh-pages` in your repository settings.
-
-## Author
-
-Developed by Hunter Dominique
