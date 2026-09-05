@@ -23,6 +23,10 @@ WTWR is a React front-end application that recommends clothing based on the curr
 - Cabinet Grotesk font (self-hosted)
 - ESLint and Prettier for code quality
 
+## Links
+
+- [Figma Design](https://www.figma.com/file/DTojSwldenF9UPKQZd6RRb/Sprint-10%3A-WTWR)
+
 ## Running locally
 
 ```bash
