@@ -1,7 +1,7 @@
 import closeIcon from "../../assets/close-light.svg";
 import "./ItemModal.css";
 
-function ItemModal({ isOpen, onClose, card, onDeleteItem }) {
+function ItemModal({ isOpen, onClose, card, onOpenConfirmationModal }) {
   const handleOverlayClick = (event) => {
     if (event.target === event.currentTarget) {
       onClose();
@@ -9,7 +9,7 @@ function ItemModal({ isOpen, onClose, card, onDeleteItem }) {
   };
 
   const handleDeleteClick = () => {
-    onDeleteItem(card);
+    onOpenConfirmationModal(card);
   };
 
   return (
