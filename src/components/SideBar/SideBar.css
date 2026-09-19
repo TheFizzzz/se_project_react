@@ -26,6 +26,25 @@
   white-space: nowrap;
 }
 
+.sidebar__button {
+  display: block;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-top: 8px;
+  cursor: pointer;
+  font:
+    700 20px/24px "Cabinet Grotesk",
+    Arial,
+    sans-serif;
+}
+.sidebar__user-info + .sidebar__button {
+  margin-top: 24px;
+}
+.sidebar__button:hover {
+  opacity: 0.6;
+}
+
 @media screen and (max-width: 820px) {
   .sidebar {
     width: 100%;

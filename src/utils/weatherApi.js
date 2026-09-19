@@ -10,7 +10,6 @@ export function getWeatherCondition(temperature) {
   return "cold";
 }
 
-
 export function getWeatherData() {
   const { latitude, longitude } = coordinates;
   const apiKey = APIkey.trim();

@@ -6,14 +6,18 @@ function Profile({
   clothingItems,
   handleOpenItemModal,
   handleOpenAddGarmentModal,
+  onCardLike,
+  onSignOut,
+  onEditProfile,
 }) {
   return (
     <div className="profile">
-      <SideBar />
+      <SideBar onSignOut={onSignOut} onEditProfile={onEditProfile} />
       <ClothesSection
         clothingItems={clothingItems}
         handleOpenItemModal={handleOpenItemModal}
         handleOpenAddGarmentModal={handleOpenAddGarmentModal}
+        onCardLike={onCardLike}
       />
     </div>
   );

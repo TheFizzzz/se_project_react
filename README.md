@@ -2,16 +2,18 @@
 
 ## About the project
 
-WTWR is a React front-end application that recommends clothing based on the current weather. Users can browse their wardrobe, view item details, add new garments through modal forms, and manage their profile page.
+WTWR is a React frontend connected to the [WTWR Express backend](https://github.com/TheFizzzz/se_project_express). Users can browse clothing by weather, register, sign in, manage their own wardrobe, and update their profile.
 
 ## Functionality
 
 - View weather information and a clothing wardrobe filtered by current conditions
 - Navigate between the main page (`/`) and profile page (`/profile`) using React Router
-- Browse all clothing items on the profile page
+- View only your own clothing items on the protected profile page
 - Open item preview modals by clicking clothing cards
-- Add new clothing items through a validated form modal (persisted via json-server)
-- Delete clothing items with a confirmation modal
+- Register, sign in, and resume a session from a saved token
+- Add and delete your own clothing items with authenticated requests
+- Like and unlike clothing items, with likes saved on the backend
+- Update your profile name and avatar
 - Toggle temperature units (Fahrenheit / Celsius)
 
 ## Technologies and techniques
@@ -19,7 +21,7 @@ WTWR is a React front-end application that recommends clothing based on the curr
 - React 18 with functional components and hooks
 - React Router v6 for client-side routing
 - Custom `useForm` hook for controlled form inputs
-- json-server as a mock REST API
+- Express and MongoDB backend
 - Vite for development and production builds
 - CSS with BEM methodology
 - Cabinet Grotesk font (self-hosted)
@@ -28,29 +30,32 @@ WTWR is a React front-end application that recommends clothing based on the curr
 ## Links
 
 - [Figma Design (Sprint 11)](https://www.figma.com/design/dQLJwEKasIdspciJAJrCaf/Sprint-11_-WTWR?node-id=311-433)
-- Project Pitch Video: _(https://drive.google.com/file/d/1d5joUB0QTwJqcCPThqa5sUQAIQps1Q_x/view?usp=drive_link)_
+- [Figma Design (Sprint 14)](https://www.figma.com/design/bfVOvqlLmoKZ5lpro8WWBe/Sprint-14_-WTWR?node-id=0-1)
+- [Backend repository](https://github.com/TheFizzzz/se_project_express)
+- [Project pitch video](https://drive.google.com/file/d/1d5joUB0QTwJqcCPThqa5sUQAIQps1Q_x/view?usp=drive_link)
 
 ## Running locally
 
-This project requires two terminals — one for the React app and one for the mock API server.
+Run MongoDB, the [Express backend](https://github.com/TheFizzzz/se_project_express), and this React app. The backend defaults to port 3001; Vite uses port 5173.
 
-**Terminal 1 — start the mock server:**
-
-```bash
-npm run server
-```
-
-Or, if json-server is installed globally:
+**Terminal 1 — start MongoDB** (if it is not already running):
 
 ```bash
-json-server --watch db.json --id _id --port 3001
+mongod --dbpath /path/to/mongodb-data
 ```
 
-**Terminal 2 — start the React app:**
+**Terminal 2 — start the backend** from its repository:
+
+```bash
+npm install
+npm run start
+```
+
+**Terminal 3 — start the frontend** from this repository:
 
 ```bash
 npm install
 npm run dev
 ```
 
-The app runs at [http://localhost:5173](http://localhost:5173) (Vite default) and the API at [http://localhost:3001](http://localhost:3001).
+Open [http://localhost:5173](http://localhost:5173). Set `VITE_API_URL` if the backend runs somewhere other than `http://localhost:3001`.
